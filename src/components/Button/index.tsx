@@ -1,16 +1,11 @@
-import React from 'react'
-
-import { ButtonStyled } from './style'
+import React from 'react';
+import { ButtonStyled } from './style';
 
 interface Props {
-  children: React.ReactNode,
-  trigger: (navigate: any) => void,
+  children: React.ReactNode;
+  trigger: (navigate: any) => void;
 }
 
 export const Button = ({ children, trigger }: Props) => {
-  return (
-    <ButtonStyled onClick={trigger}>
-      {children}
-    </ButtonStyled>
-  )
-}
+  return <ButtonStyled onClick={trigger}>{children}</ButtonStyled>;
+};

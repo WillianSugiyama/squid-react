@@ -1,3 +1,4 @@
+import React from 'react';
 import { ListStyled, ListContainer } from './style';
 
 interface Person {
@@ -5,8 +6,8 @@ interface Person {
 }
 
 interface Props {
-  persons: Person[],
-  headerText: string
+  persons: Person[];
+  headerText: string;
 }
 
 export const List = ({ persons, headerText }: Props) => {
@@ -14,16 +15,10 @@ export const List = ({ persons, headerText }: Props) => {
     <ListContainer>
       <h1> {headerText} </h1>
       <ListStyled>
-        {
-          persons.map((person: Person) => {
-            return (
-              <li key={person.name}>
-                {person.name}
-              </li>
-            )
-          })
-        }
+        {persons.map((person: Person) => {
+          return <li key={person.name}>{person.name}</li>;
+        })}
       </ListStyled>
     </ListContainer>
-  )
-}
+  );
+};

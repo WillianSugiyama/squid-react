@@ -10,10 +10,10 @@ export const ListContainer = styled.div`
     margin-left: 5%;
     font-size: 30px;
   }
-`
+`;
 
 export const ListStyled = styled.ul`
   width: 70%;
   color: white;
   columns: 2;
-`
+`;
