@@ -65,7 +65,7 @@ export const GamePage = () => {
       <GameContainer display={gameVisibility}>
         <h1> Round: {round} </h1>
         <h2> Fundo do premio: <NumberFormat value={budget} prefix={'$'} thousandSeparator={true} displayType={'text'} /></h2>
-        <img src='/red-man.gif'/>
+        <img src='/red-man.gif' alt="Homem Lula"/>
         <h2> Votos para o fim do jogo: {endGameCount}</h2>
         <Button trigger={() => {startGame()}}> Iniciar Rodada </Button>
       </GameContainer>
@@ -76,7 +76,7 @@ export const GamePage = () => {
           <p> Votos para o fim do jogo: {endGameCount} </p>
           <p> Premio por jogador Remanescente: <NumberFormat value={budget / persons.length} prefix={'$'} thousandSeparator={true} displayType={'text'}/> </p>
         </GameEndContainer>
-        <img src='/red-man.gif'/>
+        <img src='/red-man.gif' alt="Homem Lula"/>
         <Button trigger={() => {endGame(history)}}> Finalizar </Button>
       </GameContainer>
       <List headerText='Jogadores Eliminados:' persons={deadPersons} />
